@@ -1,0 +1,5 @@
+Helmet detection at construction sites is a safety measure aimed at ensuring that workers wear protective headgear (helmets) to mitigate the risk of head injuries. This is typically achieved through the use of computer vision technology and cameras strategically placed across the construction site.
+
+When a camera detects a person without a helmet, the system triggers an alert/notification that is sent to a registered user or a designated authority. The notification can be in the form of an email, SMS, or app notification, depending on the configuration of the system.
+
+The purpose of this system is to enforce safety protocols and regulations, reduce the number of accidents and injuries caused by not wearing helmets, and promote a culture of safety awareness among workers and supervisors. By leveraging technology like computer vision and real-time notifications, companies can enhance their safety measures and create a safer working environment for everyone involved in construction projects.
