@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Register</title>
+	<link rel="stylesheet" href="../../static/adminResource/css/style.min.css">
+<link rel="stylesheet" href="../../static/adminResource/css/custom.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="../../static/adminResource/css/waves.min.css">
+
+</head>
+
+<body>
+
+<div id="single-wrapper">
+	<form action="/user/insertRegister" class="frm-single" method="post"  autocomplete="off">
+		<div class="inside">
+			<div class="title"><strong>Ninja</strong>Admin</div>
+			<!-- /.title -->
+			<div class="frm-title">Register</div>
+			<!-- /.frm-title -->
+            <label for="inputName" class="control-label">First Name</label>
+            <div class="frm-input"><input type="text" name="registerFirstname" placeholder="registerFirstname" class="frm-inp"></div>
+
+            <label for="inputAddress" class="control-label">Last Name</label>
+			 <div class="frm-input"><input type="text" name="registerLastname" placeholder="registerLastname" class="frm-inp"></div>
+
+            <label for="inputContactNo" class="control-label">Gender</label>
+			<div class="frm-input"><input type="text" name="registerGender" placeholder="registerGender" class="frm-inp"></div>
+
+
+
+            <label for="inputContactNo" class="control-label">ContactNumber</label>
+			<div class="frm-input"><input type="text" name="registerContactNumber" placeholder="registerContactNumber" class="frm-inp"></div>
+
+            <label for="inputEmail" class="control-label">Email</label>
+			<div class="frm-input"><input type="email" name="loginUsername" placeholder="Username" class="frm-inp"></div>
+
+{#            <label for="inputPassword" class="control-label">Password</label>#}
+{#			<div class="frm-input"><input type="password" name="registerPassword" placeholder="Password" class="frm-inp"><i class="fa fa-lock frm-ico"></i></div>#}
+
+			<div class="clearfix margin-bottom-20">
+				<div class="checkbox primary"><input type="checkbox" id="accept"><label for="accept">I accept Terms and Conditions</label></div>
+
+			</div>
+
+			<button type="submit" class="frm-submit">Register<i class="fa fa-arrow-circle-right"></i></button>
+
+			<a href="/" class="/user/login"><i class="fa fa-sign-in"></i>Already have account? Login.</a>
+			<div class="frm-footer">NinjaAdmin © 2016.</div>
+			<!-- /.footer -->
+		</div>
+		<!-- .inside -->
+	</form>
+	<!-- /.frm-single -->
+</div><!--/#single-wrapper -->
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+<script src="../../project/static/adminResource/js/html5shiv.min.js"></script>
+<script src="../../project/static/adminResource/js/respond.min.js"></script>
+<![endif]-->
+	<!--
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="../../static/adminResource/js/jquery.min.js"></script>
+	<script src="../../static/adminResource/js/modernizr.min.js"></script>
+	<script src="../../static/adminResource/js/bootstrap.min.js"></script>
+	<script src="../../static/adminResource/js/nprogress.js"></script>
+	<script src="../../static/adminResource/js/waves.min.js"></script>
+
+	<script src="../../static/adminResource/js/main.min.js"></script>
+<script src="../../static/adminResource/js/mycommon.js"></script>
+</body>
+</html>

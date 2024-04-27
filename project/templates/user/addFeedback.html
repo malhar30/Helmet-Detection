@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+    <style>
+
+        *{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    border: 1px solid #cccccc;
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+    </style>
+
+	<title>Post Feedback</title>
+
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="../../static/adminResource/css/style.min.css">
+	<link rel="stylesheet" href="../../static/adminResource/css/custom.css">
+
+	<!-- Material Design Icon -->
+	<link rel="stylesheet" href="../../static/adminResource/css/materialdesignicons.css">
+
+	<!-- mCustomScrollbar -->
+	<link rel="stylesheet" href="../../static/adminResource/css/jquery.mCustomScrollbar.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="../../static/adminResource/css/waves.min.css">
+
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="../../static/adminResource/css/sweetalert.css">
+
+	<!-- Color Picker -->
+	<link rel="stylesheet" href="../../static/adminResource/css/color-switcher.min.css">
+</head>
+
+<body>
+
+
+
+{% include 'user/menu.html' %}
+
+
+
+<!-- /.main-menu -->
+
+
+{% include 'user/header.html' %}
+
+
+
+<!-- /.fixed-navbar -->
+
+<div id="wrapper">
+	<div class="main-content">
+		<div class="row small-spacing">
+			<div class="col-12">
+				<div class="box-content">
+					<form data-toggle="validator" action="/user/insertFeedback" method="post">
+						<div class="form-group">
+							<label for="inputName" class="control-label">Feedback Subject</label>
+							<input type="text" class="form-control" id="inputName" name="feedbackSubject" placeholder="Feedback Subject" required>
+						</div>
+
+                        <div class="form-group">
+							<label for="inputEmail" class="control-label">Feedback Description</label>
+                            <textarea type="text" class="form-control" maxlength="100" rows="2" id="inputEmail" name="feedbackDescription" placeholder="Feedback Description" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <h5><b>Feedback Rating</b></h5>
+                                <div class="rate" name="feedbackRating">
+                                    <input type="radio" name="feedbackRating" id="star5"  value="5" /><label for="star5" title="text">5 stars</label>
+                                    <input type="radio" name="feedbackRating" id="star4"  value="4" /><label for="star4" title="text">4 stars</label>
+                                    <input type="radio" name="feedbackRating" id="star3"  value="3" /><label for="star3" title="text">3 stars</label>
+                                    <input type="radio" name="feedbackRating" id="star2"  value="2" /><label for="star2" title="text">2 stars</label>
+                                    <input type="radio" name="feedbackRating" id="star1"  value="1" /><label for="star1" title="text">1 star</label>
+                                </div>
+                        </div><br><br><br>
+
+                        <div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+						</div>
+					</form>
+				</div>
+				<!-- /.box-content -->
+			</div>
+			<!-- /.col-12 -->
+		</div>
+		<!-- /.row small-spacing -->
+
+
+
+        {% include 'user/footer.html' %}
+
+
+
+    </div>
+	<!-- /.main-content -->
+</div><!--/#wrapper -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+<script src="../../project/static/adminResource/js/html5shiv.min.js"></script>
+<script src="../../project/static/adminResource/js/respond.min.js"></script>
+<![endif]-->
+	<!--
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="../../static/adminResource/js/jquery.min.js"></script>
+	<script src="../../static/adminResource/js/modernizr.min.js"></script>
+	<script src="../../static/adminResource/js/bootstrap.min.js"></script>
+	<script src="../../static/adminResource/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../../static/adminResource/js/nprogress.js"></script>
+	<script src="../../static/adminResource/js/sweetalert.min.js"></script>
+	<script src="../../static/adminResource/js/waves.min.js"></script>
+	<!-- Full Screen Plugin -->
+	<script src="../../static/adminResource/js/jquery.fullscreen-min.js"></script>
+
+	<!-- Validator -->
+	<script src="../../static/adminResource/js/validator.min.js"></script>
+
+	<script src="../../static/adminResource/js/main.min.js"></script>
+<script src="../../static/adminResource/js/mycommon.js"></script>
+	<script src="../../static/adminResource/js/color-switcher.min.js"></script>
+</body>
+</html>
